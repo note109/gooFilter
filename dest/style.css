@@ -2,9 +2,6 @@ body {
   margin: 0;
   padding: 0; }
 
-.list {
-  filter: url("#joint"); }
-
 .wrapper {
   filter: url("#joint");
   width: 100vw;
@@ -42,3 +39,21 @@ body {
   border-radius: 100%;
   position: absolute;
   cursor: pointer; }
+
+.list {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  filter: url("#joint"); }
+
+.list-2 {
+  display: flex;
+  position: absolute;
+  bottom: 60px; }
+
+.list-item {
+  margin: 0 10px;
+  background-color: #FD5900;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%; }

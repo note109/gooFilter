@@ -54,4 +54,12 @@ $(function () {
       opacity: val
     });
   });
+
+  var step = 0.05;
+  _.range(0, 1 + step, step).forEach(function (n) {
+    var item = $("<div>").addClass("list-item").css({ opacity: n });
+    $(".list").append(item);
+    var item2 = $("<div>").addClass("list-item").css({ opacity: n });
+    $(".list-2").append(item2);
+  });
 });

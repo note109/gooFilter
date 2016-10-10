@@ -51,4 +51,12 @@ $(() => {
     });
   });
 
+  const step = 0.05;
+  _.range(0, 1 + step, step).forEach((n) => {
+    const item = $("<div>").addClass("list-item").css({opacity: n});
+    $(".list").append(item);
+    const item2 = $("<div>").addClass("list-item").css({opacity: n});
+    $(".list-2").append(item2);
+  });
+
 });

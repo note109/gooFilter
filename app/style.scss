@@ -5,9 +5,6 @@ body {
 
 $size: 32px;
 
-.list {
-  filter: url("#joint");
-}
 .wrapper {
   filter: url("#joint");
   width: 100vw;
@@ -57,12 +54,32 @@ $size: 32px;
   }
 }
 
+$col: #FD5900;
+
 .circle {
   width: $size;
   height: $size;
-  background-color: #FD5900;
+  background-color: $col;
   border-radius: 100%;
   position: absolute;
   cursor: pointer;
 }
 
+.list {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  filter: url("#joint");
+}
+.list-2 {
+  display: flex;
+  position: absolute;
+  bottom: 60px;
+}
+.list-item {
+  margin: 0 10px;
+  background-color: $col;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+}
