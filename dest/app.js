@@ -57,9 +57,21 @@ $(function () {
 
   var step = 0.05;
   _.range(0, 1 + step, step).forEach(function (n) {
+    n = floatFormat(n, 2);
+    console.log("\n");
+    console.log(n);
+    console.log(0 + n * 18 + -7);
     var item = $("<div>").addClass("list-item").css({ opacity: n });
     $(".list").append(item);
     var item2 = $("<div>").addClass("list-item").css({ opacity: n });
     $(".list-2").append(item2);
+    var item3 = $("<div>" + n + "</div>").addClass("list-label");
+    $(".list-3").append(item3);
   });
 });
+
+var floatFormat = function floatFormat(number, n) {
+  var pow = Math.pow(10, n);
+
+  return Math.round(number * pow) / pow;
+};
