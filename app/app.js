@@ -53,10 +53,23 @@ $(() => {
 
   const step = 0.05;
   _.range(0, 1 + step, step).forEach((n) => {
+    n = floatFormat(n, 2);
+    console.log("\n");
+    console.log(n);
+    console.log(0+n*18+-7);
     const item = $("<div>").addClass("list-item").css({opacity: n});
     $(".list").append(item);
     const item2 = $("<div>").addClass("list-item").css({opacity: n});
     $(".list-2").append(item2);
+    const item3 = $(`<div>${n}</div>`).addClass("list-label");
+    $(".list-3").append(item3);
   });
 
 });
+
+const floatFormat = (number, n) => {
+  const pow = Math.pow(10, n);
+
+  return Math.round(number * pow) / pow;
+};
+
